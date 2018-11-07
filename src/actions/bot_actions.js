@@ -3,7 +3,6 @@ import { getBotsUtil } from '../utils/APIUtils';
 export const RECEIVE_BOTS = 'RECEIVE_BOTS';
 
 export const receiveBots = bots => {
-  debugger
   return ({
     type: RECEIVE_BOTS,
     bots

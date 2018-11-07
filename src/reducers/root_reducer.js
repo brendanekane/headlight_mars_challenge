@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import nodeReducer from './nodes_reducer';
 import botReducer from './bots_reducer';
-
-//combineReducers puts all of my reducers together to pass along to my redux store
+import gridReducer from './grid_reducer';
 
 const rootReducer = combineReducers({
   bots: botReducer,
-  nodes: nodeReducer
+  nodes: nodeReducer,
+  grid: gridReducer 
 });
 
 export default rootReducer;

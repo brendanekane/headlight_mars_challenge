@@ -4,9 +4,9 @@ const botReducer = (state = {}, action) => {
   Object.freeze(state);
   let nextState = {};
   switch (action.type) {
-      case RECEIVE_BOTS:
-      debugger
+    case RECEIVE_BOTS:
       const botObject = action.bots.Bots;
+      // needed because action.bots is empty on initial render
       if (Object.keys(action.bots).length === 0 & action.bots.constructor === Object){
         return state;
       } else {
@@ -15,7 +15,7 @@ const botReducer = (state = {}, action) => {
         });
       }
       return nextState;
-      default:
+    default:
       return state;
   }
 };
