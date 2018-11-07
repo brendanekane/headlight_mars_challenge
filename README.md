@@ -1,44 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mars Mining Discovery Tournament
 
-## Available Scripts
 
-In the project directory, you can run:
+## My approach
 
-### `npm start`
+My approach was to make a react app that managed state by using redux. In order to save on time I used create-react-app to generate the skeleton code as well as webpack, babel, and other dependencies. In order to make my state more maneagable to work with I created a selectors file that takes in the state in mapStateToProps props function and returns a normalized state. I separated out my API calls from my actions into a APIUtils file which I imported the necessary functions when required.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tradeoffs I made
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The biggest tradeoff the I made was using create-react-app because it includes a lot of scripts and dependencies that are entirely necessary for this app. However considering I wanted to use a redux workflow to manage my state I knew that I wouldn't have time to build the react skeleton and configure webpack in the time given.
 
-### `npm test`
+## Future goals
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+With more time I would've implemented:
+   * First and foremost, I would have liked to make the UI look much nicer. I think some more colors or pictures would be the first thing to change, as well as having roaming bot, mining bot, and mineral sprites instead of colored squares would look a whole lot better.
+   * I think that the ability to directly control the bots would be a really cool feature to implement. However I think that the amount of time that a bot can be controlled should be limited, to allow a nice mixture of random movement from API calls and structured movement from a user.
 
-### `npm run build`
+The first feature would probably only take me 20-30 minutes to find the sprites and have each grid cell that contained a node or a bot have its class replaced by a tag that put the sprite on the DOM.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The second feature would take much longer to implement. I would first need a way for the user to directly select the bot that they want to control. Then I would need to implement a way for the user to actually control the bot. I think I would approach this by binding the cursor as well as the arrow keeps to certain functions. The cursor function could select the specific cell that's clicked on and store it's bot in memory, then the arrow key functions would grab that bot in memory and directly manipulate its Location values based on which direction was pushed.
