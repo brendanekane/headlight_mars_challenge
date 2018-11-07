@@ -7,6 +7,8 @@ class MarsSurface extends React.Component {
     this.props.getNodes();
   }
 
+  
+
   render() {
     return(
       <div>  Hello World </div>

@@ -2,12 +2,13 @@ import MarsSurface from './mars_surface';
 import { connect } from 'react-redux';
 import { getBots } from '../actions/bot_actions';
 import { getNodes } from '../actions/node_actions';
-import { allNodes, allBots } from '../reducers/selectors';
+import { allNodes, allBots, allGrid } from '../reducers/selectors';
 
 const mapStateToProps = ({ nodes, bots }) => {
   return ({
     nodes: allNodes(nodes),
     bots: allBots(bots)
+    // grid: allGrid(grid)
   });
 };
 
