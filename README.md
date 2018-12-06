@@ -1,6 +1,6 @@
 # Mars Mining Discovery Tournament
 
-Hackathon hosted by Headlight Labs in November, 2018. Goal was to create a front-end website within two hours showing bots mining nodes on the surface of mars by utilizing their API. Two end points were available for their API — one for bots and one for nodes. The api would return a json object that included information for each node/bot such as unique identifying name, (x,y) location coordinates, value/score (depending on node/bot), claim_by/claims (depending on node/bot), etc. Ultimately I ended up placing as one of the top finishers in the contest. The bots would move location every 1000 milliseconds but the nodes would never change location.
+Hackathon hosted by Headlight Labs in November, 2018. Goal was to create a front-end website within two hours showing bots mining nodes on the surface of mars by utilizing their API. Two end points were available for their API — one for bots and one for nodes. The api would return a json object that included information for each node/bot such as unique identifying name, (x,y) location coordinates, value/score (depending on node/bot), claim_by/claims (depending on node/bot), etc. The bots would move location every 1000 milliseconds but the nodes would never change location. Ultimately I ended up placing as one of the top finishers in the contest. 
 
 
 ## My approach
